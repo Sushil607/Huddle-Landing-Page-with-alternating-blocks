@@ -1,0 +1,332 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap'); */
+
+/**
+ *! CSS Varriables
+**/
+:root{
+    --primary-pink:hsl(322, 100%, 66%);
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%) ;
+    --grayish-blue: hsl(208, 11%, 55%);
+}
+
+/**
+ *! Resetting General Styles
+**/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    padding: 2rem;
+}
+
+/**
+ *! Typography
+**/
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--very-dark-cyan);
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--very-dark-cyan);
+}
+
+button{
+    border: none;
+}
+
+/**
+ *! Hero Section Styles
+**/
+
+#hero{
+    background-color: var(--very-pale-cyan);
+    background-image: url(./images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+}
+
+.logo{
+    width: 120px;
+}
+
+.hero-section-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.try-btn{
+    cursor: pointer;
+    padding: 0.4rem 1.2rem;
+    background-color: white;
+    /* border: 1px solid var(--grayish-blue); */
+    border-radius: 15px;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    box-shadow: 2px 2px 5px -4px var(--grayish-blue), 2px 2px 5px -4px var(--grayish-blue);
+}
+
+.hero-section-bottom{
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#hero p{
+    margin: 2rem 0;
+    color: var(--very-dark-cyan);
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.get-started-btn{
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    background-color: var(--primary-pink);
+    color: white;
+    padding: 0.8rem 0;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 16rem;
+}
+
+.get-started-btn:hover{
+    opacity: 0.8;
+}
+
+.hero-section-illustration img{
+    width: 100%;
+    height: auto;
+}
+
+/**
+ *! Card Section Styles
+**/
+
+#cards{
+    padding: 2rem 0;
+}
+
+.card{
+    text-align:center;
+    border-radius: 10px;
+    margin: 1.3rem 0;
+    box-shadow: 4px 4px 5px -4px var(--grayish-blue) , -4px -4px 5px -4px var(--grayish-blue) ;
+}
+
+.card-illustration{
+    padding: 2.5rem 1rem;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+}
+
+.card-text{
+    padding: 1.5rem 2rem;
+}
+
+.card h2{
+    margin: 1rem 0;
+}
+
+.card-text p{
+    margin: 1rem 0;
+    line-height: 1.3rem;
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+}
+
+/**
+ *! Get Started Section
+**/
+
+#get-started{
+    padding: 2rem 0;
+    background: linear-gradient(to bottom,#fff 60%, var(--very-dark-cyan) 60%);
+}
+
+#get-started .container{
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 2rem;
+    box-shadow: -2px -2px 12px -4px var(--grayish-blue);
+}
+
+#get-started .get-started-btn{
+    margin:2rem 0 ;
+}
+
+/**
+ *! Footer Section
+**/
+
+#footer .container{
+    background-color: var(--very-dark-cyan);
+}
+
+/* contacts */
+.contacts{
+    margin: 1rem 0;
+}
+
+.contact-field{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contact-field p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.links-group a{
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.links-group a:hover{
+    text-decoration: underline;
+}
+
+/* Social */
+.social{
+    margin: 2rem 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a i{
+    padding: 0.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.social a i:hover{
+    border-color:var(--primary-pink);
+    color: var(--primary-pink);
+}
+
+.copyright{
+    color: var(--very-pale-cyan);
+    text-align: center;
+}
+
+/**
+ *! Media Queries
+**/
+
+@media(min-width:768px){
+    .hero-section-bottom{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-section-text{
+        text-align: left;
+    }
+
+    .get-started-btn{
+        margin: -0.5rem 0;
+    }
+
+    .card{
+        margin: 2.5rem 0;
+        display: flex;
+    }
+
+    .card-illustration{
+        flex: 1;
+    }
+
+    .card-text{
+        padding-top: 4rem;
+        text-align: left;
+        flex: 1;
+    }
+
+    .reverse .card-text{
+        order: 1;
+    }
+
+    .reverse .card-illustration{
+        order: 2;
+    }
+
+    #get-started .container{
+        margin: 0 7rem;
+    }
+
+    .footer-info{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    .contact-field p{
+        font-size: 0.9rem;
+    }
+
+    .links-group a{
+        font-size: 0.9rem;
+    }
+
+    .social{
+        align-items: flex-start;
+    }
+
+    .copyright{
+        text-align: right;
+    }
+}
+
+@media(min-width:1024px){
+
+    #hero {
+        background-color: var(--very-pale-cyan);
+        background-image: url(./images/bg-hero-desktop.svg);
+        background-repeat: no-repeat;
+    }
+
+    .card-text {
+        padding: 8rem 4rem;
+    }
+
+    .container{
+     padding: 2rem 5rem;
+    }
+
+    #get-started .container{
+        margin: 0 16rem;
+    }
+
+}
